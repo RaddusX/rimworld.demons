@@ -10,10 +10,10 @@ Currently this mod contains Succubus & Incubus Xenotypes, but I may expand it in
 
 # Requirements
 - RimWorld v1.6.
-- Biotech
-- Royalty
-- Vanilla Expanded Framework
-- Vanilla Races Expanded - Archon (extremely aggressive, natural psylink, & maniac genes)
+- [Biotech](https://store.steampowered.com/app/1826140/RimWorld__Biotech/)
+- [Royalty](https://store.steampowered.com/app/1149640/RimWorld__Royalty/)
+- [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
+- [Vanilla Races Expanded - Archon](https://steamcommunity.com/sharedfiles/filedetails/?id=3067715093) (extremely aggressive, natural psylink, & maniac genes)
 
 # Recommended
 Mods I recommend if you wish them to appear as they do in the screenshot(s).
@@ -109,12 +109,12 @@ In no particular order:
 - Have a suggestion? Let me know!
 
 # Credits
-- Harmony (I don't currently use this at the moment but no doubt I will be in the future. However, VEF below uses this.)
-- Vanilla Expanded Framework (VEF) (ignoring terrain costs for wings, forcing female or male for xenotypes, and claw hediffs/damage)
-- Alpha Genes for the claws gene icon!
-- Vanilla Races Expanded - Archon (extremely aggressive, natural psylink, & maniac genes)
-- ReSplice: Charmweavers for the lovely horns (not all horns are from this mod but most are), wings, and tail gene graphics.
-- More Mini-Horns for additional mini-horn textures for Succubi & Incubi. The default mini horn texture ("MiniHorns_east,south,north" etc) is actually higher resolution than the others and I'm trying to remember where I got it from...
+- [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077) (I don't currently use this at the moment but no doubt I will be in the future. However, VEF below uses this.)
+- [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013) (ignoring terrain costs for wings, forcing female or male for xenotypes, and claw hediffs/damage)
+- [Alpha Genes](https://steamcommunity.com/sharedfiles/filedetails/?id=2891845502) for the claws gene icon!
+- [Vanilla Races Expanded - Archon](https://steamcommunity.com/sharedfiles/filedetails/?id=3067715093) (extremely aggressive, natural psylink, & maniac genes)
+- [ReSplice: Charmweavers](https://steamcommunity.com/sharedfiles/filedetails/?id=3131996691) for the lovely horns (not all horns are from this mod but most are), wings, and tail gene graphics.
+- [More Mini-Horns](https://steamcommunity.com/sharedfiles/filedetails/?id=3151668881) for additional mini-horn textures for Succubi & Incubi. The default mini horn texture ("MiniHorns_east,south,north" etc) is actually higher resolution than the others and I'm trying to remember where I got it from...
 - [github.com/Rimworld-Mods/Template](github.com/Rimworld-Mods/Template) for the Visual Studio Code template
 - [deepai.org](deepai.org) for some images which I then modified. I'm a novice designer. I would like to have custom graphics made for everything in the future.
 - Thank you to the following creators for their amazing sounds!
