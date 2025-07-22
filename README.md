@@ -79,7 +79,7 @@ Once the above is done, you just need to do this to build the assembly:
 - Psyfocus currently isn't gained when using the vanilla Lovin' feature. I plan on adding support for this in the future.
 
 # Incompatibilities
-- Humanoid Alien Races (HAR): It's a minor incompatibility I recently noticed. When polymorphing into human form, the red skin color isn't removed. I'm suprised this happens as the gene that gives this skin color is actually removed when changing to human form. However, if you're using Biotech, you probably aren't using this mod. I happened to notice it because I was recently trying out a mod that used HAR.
+- Humanoid Alien Races (HAR): It's a minor incompatibility I recently noticed. When polymorphing into human form, the red skin color isn't removed. I'm surprised this happens as the gene that gives this skin color is actually removed when changing to human form. However, if you're using Biotech, you probably aren't using this mod. I happened to notice it because I was recently trying out a mod that used HAR.
 
 # RJW Compatibility
 - The Sex meditation focus from this mod is used, so that psyfocus can be regained through sex.
