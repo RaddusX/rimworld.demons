@@ -89,6 +89,7 @@ Once the above is done, you just need to do this to build the assembly:
 - I modified the position of the wings and tail specifically for this mod.
 
 # License
+This license was chosen because it's the same license used by mods that this mod uses assets of.
 - [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 # Planned Features
