@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Succubus Horns -->
+
+    <GeneDef ParentName="GeneHeadboneBase">
+        <defName>RaddusX_Demons_Succubus_Horns_Gene</defName>
+        <label>mini-horns (varied)</label>
+        <description>Carriers of this gene grow a variety of different small horns on their heads.</description>
+        <iconPath>UI/Icons/Genes/Gene_HeadboneMinihorns</iconPath>
+        <displayCategory>RaddusX_Demon</displayCategory>
+        <renderNodeProperties>
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                <texPaths>
+                    <!-- Note if you add or remove texPaths, it will cause every horn used on a pawn to change. This is vanilla functionality -->
+                    <!-- Note also I've commented out some mini horns that are used for Incubus (larger horns or horns pointing away), since I didn't think they fit Succubi -->
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_1</li>
+                    <!--<li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_2</li>-->
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_4</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_5</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_6</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_7</li>
+                    <!--<li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_8</li>-->
+                    <!--<li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_9</li>-->
+                    <!--<li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_10</li>-->
+                    <!--<li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_11</li>-->
+                    <!--<li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_12</li>-->
+                </texPaths>
+                <color>(255, 255, 255)</color>
+                <parentTagDef>Head</parentTagDef>
+                <drawData>
+                    <defaultData>
+                        <layer>80</layer>
+                    </defaultData>
+                    <dataNorth>
+                        <layer>10</layer>
+                    </dataNorth>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>horn</symbol></li>
+                <li><symbol>knob</symbol></li>
+                <li><symbol>spike</symbol></li>
+                <li><symbol>devil</symbol></li>
+                <li><symbol>demon</symbol></li>
+                <li><symbol>luci</symbol></li>
+                <li><symbol>beelze</symbol></li>
+                <li><symbol>hell</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>horn</symbol></li>
+                <li><symbol>spike</symbol></li>
+                <li><symbol>vil</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!-- Incubus Horns -->
+
+    <GeneDef ParentName="GeneHeadboneBase">
+        <defName>RaddusX_Demons_Incubus_Horns_Gene</defName>
+        <label>horns (varied)</label>
+        <description>Carriers of this gene grow a variety of different horns on their heads.</description>
+        <iconPath>UI/Icons/Genes/Incubus_Horns</iconPath>
+        <displayCategory>RaddusX_Demon</displayCategory>
+        <renderNodeProperties>
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                <color>(255, 255, 255)</color>
+                <texPaths>
+                    <!-- Note if you add or remove texPaths, it will cause every horn used on a pawn to change. This is vanilla functionality -->
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_1</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_2</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_4</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_5</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_6</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_7</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_8</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_9</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_10</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_11</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/MiniHorns/MiniHorns_12</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/RamHorns/RamHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DemonHorns/DemonHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                    <li>Things/Pawn/Humanlike/HeadAttachments/DevilHorns/DevilHorns</li>
+                </texPaths>
+                <drawData>
+                    <defaultData>
+                        <layer>80</layer>
+                    </defaultData>
+                    <dataNorth>
+                        <layer>10</layer>
+                    </dataNorth>
+                </drawData>
+                <parentTagDef>Head</parentTagDef>
+            </li>
+        </renderNodeProperties>
+    </GeneDef>
+</Defs>

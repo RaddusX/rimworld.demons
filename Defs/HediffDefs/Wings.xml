@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HediffDef>
+        <defName>RaddusX_Demons_Wings_Ignore_Terrain_Movement_Costs</defName>
+        <label>wings</label>
+        <description>This person has a pair of wings, capable of flight, that enables them to fly over obstacles or difficult terrain that would otherwise slow them down.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="VEF.AnimalBehaviours.HediffCompProperties_Floating" />
+        </comps>
+    </HediffDef>
+    
+</Defs>

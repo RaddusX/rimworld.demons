@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- "Tried to drain me" - Social -->
+    <!-- @TODO When/if pawns can be transformed into a Succubus/Incubus, possibly remove this thought (since currently it's virtually permanent), depending on various conditions.  -->
+
+    <ThoughtDef>
+        <defName>RaddusX_Demons_Tried_To_Drain_Me_Negative_Thought</defName>
+        <thoughtClass>Thought_MemorySocial</thoughtClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <durationDays>9999</durationDays>
+        <stackLimit>300</stackLimit>
+        <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn> <!-- Arbitrary number to ensure the victim has a negative opinion of the attacker -->
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>Tried to drain me</label>
+                <baseOpinionOffset>-100</baseOpinionOffset>
+            </li>
+        </stages>
+        <thoughtToMake>RaddusX_Demons_Tried_To_Drain_Me_Negative_Thought_Mood</thoughtToMake>
+    </ThoughtDef>
+    
+    <!-- "Tried to drain me" - Mood -->
+
+    <ThoughtDef>
+        <defName>RaddusX_Demons_Tried_To_Drain_Me_Negative_Thought_Mood</defName>
+        <durationDays>30</durationDays>
+        <stackLimit>10</stackLimit>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>survived draining kiss attack</label>
+                <description>At first I thought it was an innocent kiss, but then it felt like my soul was being sucked away.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    
+</Defs>

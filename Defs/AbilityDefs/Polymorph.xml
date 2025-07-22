@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Polymorph Base Ability (Succubi & Incubi's abilities below inherit from this) -->
+    
+    <AbilityDef Name="RaddusX_Demons_Polymorph_Ability" ParentName="PsycastBase" Abstract="True">
+        <label>polymorph</label>
+        <description>Change into your human form or back into your true form.</description>
+        <warmupStartSound>RaddusX_Demons_Polymorph_Ability_Cast</warmupStartSound>
+        <displayOrder>500</displayOrder>
+        <hostile>false</hostile>
+        <cooldownTicksRange>1</cooldownTicksRange>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <warmupSound />
+        <!-- TODO: Maybe try to remove that blue image that appears above the pawn's head when casting the ability. -->
+        <!--<warmupMote />--> <!-- doesn't hide gfx -->
+        <statBases>
+            <Ability_EntropyGain>1</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.01</Ability_PsyfocusCost> <!-- 1% -->
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastPsycast</verbClass>
+            <range>-1</range> <!-- Don't show white square over pawn when hovering over ability -->
+            <warmupTime>0.5</warmupTime>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="RaddusX.Demons.Abilities.Polymorph_Ability" />
+        </comps>
+    </AbilityDef>
+
+    <!-- Polymorph Succubus Ability -->
+
+    <AbilityDef ParentName="RaddusX_Demons_Polymorph_Ability">
+        <defName>RaddusX_Demons_Succubus_Polymorph_Ability</defName>
+        <iconPath>UI/Icons/Abilities/Succubus_Polymorph_Ability</iconPath>
+    </AbilityDef>
+
+    <!-- Polymorph Incubus Ability -->
+
+    <AbilityDef ParentName="RaddusX_Demons_Polymorph_Ability">
+        <defName>RaddusX_Demons_Incubus_Polymorph_Ability</defName>
+        <iconPath>UI/Icons/Abilities/Incubus_Polymorph_Ability</iconPath>
+    </AbilityDef>
+    
+</Defs>

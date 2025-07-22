@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- 
+    DEV NOTE: Traits were added at the beginning of the project, so that meditation focus types could be allowed/disallowed.
+    In the future I may remove this and add it through C# if possible, so that there isn't a need for the traits.
+    -->
+
+    <!-- Incubus -->
+    
+    <TraitDef>
+        <defName>Incubus</defName>
+        <commonality>0</commonality>
+        <commonalityFemale>0</commonalityFemale>
+        <degreeDatas>
+            <li>
+                <label>incubus</label>
+                <description>[PAWN_nameDef] is a male demon known as an Incubus.</description>
+                <allowedMeditationFocusTypes>
+                    <li MayRequire="rim.job.world">Sex</li>
+                </allowedMeditationFocusTypes>
+                <disallowedMeditationFocusTypes>
+                    <li>Artistic</li>
+                    <li>Flame</li>
+                    <li>Natural</li>
+                    <li>Morbid</li>
+                    <li>Minimal</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Wealth</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Science</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Group</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Archotech</li>
+                </disallowedMeditationFocusTypes>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Succubus</li>
+        </conflictingTraits>
+    </TraitDef>
+
+    <!-- Succubus -->
+    
+    <TraitDef>
+        <defName>Succubus</defName>
+        <commonality>0</commonality>
+        <commonalityFemale>0</commonalityFemale>
+        <degreeDatas>
+            <li>
+                <label>succubus</label>
+                <description>[PAWN_nameDef] is a female demon known as a Succubus.</description>
+                <allowedMeditationFocusTypes>
+                    <li MayRequire="rim.job.world">Sex</li>
+                </allowedMeditationFocusTypes>
+                <disallowedMeditationFocusTypes>
+                    <li>Artistic</li>
+                    <li>Flame</li>
+                    <li>Natural</li>
+                    <li>Morbid</li>
+                    <li>Minimal</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Wealth</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Science</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Group</li>
+                    <li MayRequire="VanillaExpanded.VPsycastsE">VPE_Archotech</li>
+                </disallowedMeditationFocusTypes>
+            </li>
+        </degreeDatas>
+        <conflictingTraits>
+            <li>Incubus</li>
+        </conflictingTraits>
+    </TraitDef>
+</Defs>

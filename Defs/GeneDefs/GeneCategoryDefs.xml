@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneCategoryDef>
+        <defName>RaddusX_Demon</defName>
+        <label>demon</label>
+        <!-- Having categories share the same order can cause an error on start up, so we'll try to avoid that: -->
+        <displayPriorityInXenotype>666.666</displayPriorityInXenotype>
+        <displayPriorityInGenepack>666.666</displayPriorityInGenepack>
+    </GeneCategoryDef>
+</Defs>

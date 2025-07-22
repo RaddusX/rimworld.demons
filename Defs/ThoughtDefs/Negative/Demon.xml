@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>RaddusX_Demons_Demon_Negative_Thought</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>RaddusX.Demons.Thoughts.Demon_Negative_Thought</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <nullifyingTraits>
+            <li>Psychopath</li>
+            <li>Succubus</li>
+            <li>Incubus</li>
+        </nullifyingTraits>
+        <stages>
+            <li>
+                <label>Demon form</label>
+                <baseOpinionOffset>-60</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

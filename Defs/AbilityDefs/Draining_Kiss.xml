@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>RaddusX_Demons_Draining_Kiss_Ability</defName>
+        <label>Draining Kiss</label>
+        <description>Attempt to drain all the psyessence of a target, killing them in the process. Success depends on the caster and target's melee skills. Doesn't work on Sanguophages, Succubi, or Incubi. Has the possibility to change a target into a Sanguophage if they aren't one already.</description>
+        <iconPath>UI/Icons/Abilities/Incubus_Polymorph_Ability</iconPath>
+        <hostile>true</hostile>
+        <cooldownTicksRange>180000</cooldownTicksRange> <!-- 3 days -->
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence> <!-- You can change this to false if you want. I've allowed this to work in the C# code. -->
+        <writeCombatLog>true</writeCombatLog>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <warmupStartSound>RaddusX_Demons_Draining_Kiss_Ability_Cast</warmupStartSound>
+        <warmupSound />
+        <stunTargetWhileCasting>true</stunTargetWhileCasting>
+        <statBases>
+            <Ability_EntropyGain>30</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.5</Ability_PsyfocusCost> <!-- 50% -->
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastPsycast</verbClass>
+            <range>1</range>
+            <warmupTime>1</warmupTime>
+            <requireLineOfSight>true</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetHumans>true</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="RaddusX.Demons.Abilities.Draining_Kiss_Ability" />
+        </comps>
+        
+    </AbilityDef>
+    
+</Defs>

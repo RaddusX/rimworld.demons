@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef ParentName="GeneTailBase">
+        <defName>RaddusX_Demons_Tail_Gene</defName>
+        <label>spiked tail</label>
+        <description>Carriers of this gene have a long tail with a sharp spike at the end.</description>
+        <iconPath>UI/Icons/Genes/Tail</iconPath>
+        <iconColor>(0.75, 0.75, 0.75)</iconColor>
+        <displayCategory>RaddusX_Demon</displayCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <statOffsets>
+            <MeleeDodgeChance>0.1</MeleeDodgeChance> <!-- Tail helps with balance -->
+            <MoveSpeed>0.1</MoveSpeed> <!-- Tail helps with balance and speed -->
+            <ForagedNutritionPerDay>0.1</ForagedNutritionPerDay> <!-- MoveSpeed doesn't appear to affect foraged nutrition, so we'll account for that -->
+            <CarryingCapacity>1</CarryingCapacity> <!-- 1kg -->
+        </statOffsets>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/DemonicTail/DemonicTail</texPath>
+                <colorType>Skin</colorType>
+                <overrideMeshSize>(1, 1)</overrideMeshSize>
+                <parentTagDef>Body</parentTagDef>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <drawData>
+                    <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+                    <defaultData>
+                        <layer>-2</layer>
+                    </defaultData>
+                    <!-- Changes below are for OTYOTY / Zero's Sized Apparel so that the anus is visible, and it seems to look fine in vanilla as well -->
+                    <dataNorth>
+                        <!--<offset>(0.1, 0, -0.45)</offset>-->
+                        <offset>(0.1, 0, -0.20)</offset>
+                        <layer>90</layer>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(-0.1, 0, -0.25)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <!--<offset>(-0.5, 0, -0.15)</offset>-->
+                        <offset>(-0.4, 0, -0.15)</offset>
+                    </dataEast>
+                    <dataWest>
+                        <!--<offset>(0.5, 0, -0.15)</offset>-->
+                        <offset>(0.4, 0, -0.15)</offset>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </GeneDef>
+</Defs>

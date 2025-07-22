@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Main Gene -->
+
+    <GeneDef Name="RaddusX_Demons_Demon_Form_Type" Abstract="True">
+        <displayOrderInCategory>20</displayOrderInCategory>
+        <biostatMet>0</biostatMet>
+        <biostatCpx>1</biostatCpx>
+        <customEffectDescriptions>
+            <li>Lustful by nature, they will crave lovin' more often.</li>
+        </customEffectDescriptions>
+        <displayCategory>RaddusX_Demon</displayCategory>
+        <statOffsets>
+            <SexFrequency MayRequire="rim.job.world">1</SexFrequency> <!-- +100% -->
+        </statOffsets>
+        <exclusionTags>
+            <li>SuccubusOrIncubus</li>
+            <li>Gender</li>
+        </exclusionTags>
+        <forcedTraits>
+            <li>
+                <def>Bisexual</def>
+            </li>
+        </forcedTraits>
+        <lovinMTBFactor>1</lovinMTBFactor> <!-- +100% --> <!-- For reference, High Libido is 0.5 or +50% -->
+    </GeneDef>
+
+    <!-- Main Incubus Gene -->
+
+    <GeneDef Name="RaddusX_Incubus_Demon_Form_Type" ParentName="RaddusX_Demons_Demon_Form_Type" Abstract="True">
+        <description>Carriers of this gene have undergone transformation into an Incubus, or may have been born as one.</description>
+        <abilities>
+            <li>RaddusX_Demons_Incubus_Polymorph_Ability</li>
+        </abilities>
+        <forcedTraits>
+            <li>
+                <def>Incubus</def>
+            </li>
+        </forcedTraits>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <forceMale>true</forceMale>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Incubus Demon Form -->
+
+    <GeneDef ParentName="RaddusX_Incubus_Demon_Form_Type">
+        <defName>RaddusX_Demons_Incubus_Demon_Form_Gene</defName>
+        <label>incubus</label>
+        <iconPath>UI/Icons/Genes/Incubus_Demon_Form</iconPath>
+    </GeneDef>
+
+    <!-- Incubus Human Form -->
+
+    <GeneDef ParentName="RaddusX_Incubus_Demon_Form_Type">
+        <defName>RaddusX_Demons_Incubus_Human_Form_Gene</defName>
+        <label>incubus (human form)</label>
+        <iconPath>UI/Icons/Genes/Incubus_Human_Form</iconPath>
+        <biostatMet>-6</biostatMet>
+        <renderNodeProperties /> <!-- needed? -->
+    </GeneDef>
+
+    <!-- Main Succubus Gene -->
+
+    <GeneDef Name="RaddusX_Succubus_Demon_Form_Type" ParentName="RaddusX_Demons_Demon_Form_Type" Abstract="True">
+        <label>succubus</label>
+        <description>Carriers of this gene have undergone transformation into a Succubus, or may have been born as one.</description>
+        <abilities>
+            <li>RaddusX_Demons_Succubus_Polymorph_Ability</li>
+            <li>RaddusX_Demons_Draining_Kiss_Ability</li>
+        </abilities>
+        <forcedTraits>
+            <li>
+                <def>Succubus</def>
+            </li>
+        </forcedTraits>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <forceFemale>true</forceFemale>
+            </li>
+        </modExtensions>
+        <soundCall>RaddusX_Demons_Succubus_Sound_Call</soundCall>
+        <soundWounded>RaddusX_Demons_Succubus_Sound_Wounded</soundWounded>
+        <soundDeath>RaddusX_Demons_Succubus_Sound_Death</soundDeath>
+    </GeneDef>
+
+    <!-- Succubus Demon Form -->
+
+    <GeneDef ParentName="RaddusX_Succubus_Demon_Form_Type">
+        <defName>RaddusX_Demons_Succubus_Demon_Form_Gene</defName>
+        <iconPath>UI/Icons/Genes/Succubus_Demon_Form</iconPath>
+    </GeneDef>
+
+    <!-- Succubus Demon Form -->
+
+    <GeneDef ParentName="RaddusX_Succubus_Demon_Form_Type">
+        <defName>RaddusX_Demons_Succubus_Human_Form_Gene</defName>
+        <label>succubus (human form)</label>
+        <iconPath>UI/Icons/Genes/Succubus_Human_Form</iconPath>
+        <biostatMet>-6</biostatMet>
+        <renderNodeProperties />
+    </GeneDef>
+    
+</Defs>

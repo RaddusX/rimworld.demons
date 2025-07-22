@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef Name="RaddusX_Demons_Wings" Abstract="True">
+        <displayCategory>Miscellaneous</displayCategory>
+        <exclusionTags>
+            <li>Wing</li>
+            <li>Wings</li>
+        </exclusionTags>
+    </GeneDef>
+    
+    <GeneDef ParentName="RaddusX_Demons_Wings">
+        <defName>RaddusX_Demons_Wings_Gene</defName>
+        <label>wings</label>
+        <description>Carriers of this gene have a pair of flight-capable demon-like wings.</description>
+        <iconPath>UI/Icons/Genes/Wings</iconPath>
+        <iconColor>(0.75, 0.75, 0.75)</iconColor>
+        <displayCategory>RaddusX_Demon</displayCategory>
+        <customEffectDescriptions>
+            <li>Not slowed down by difficult terrain.</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <MoveSpeed>0.3</MoveSpeed>
+            <ForagedNutritionPerDay>0.3</ForagedNutritionPerDay> <!-- MoveSpeed doesn't appear to affect foraged nutrition, so we'll account for that -->
+        </statOffsets>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <renderNodeProperties>
+            <li>
+                <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/DemonicWing/DemonicWing</texPath>
+                <colorType>Skin</colorType>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <drawData>
+                    <defaultData>
+                        <layer>10</layer>
+                    </defaultData>
+                    <dataNorth>
+                        <layer>80</layer>
+                        <offset>(0, 0.2, -0.1)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, -0.2, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.3, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffToWholeBody>RaddusX_Demons_Wings_Ignore_Terrain_Movement_Costs</hediffToWholeBody>
+            </li>
+        </modExtensions>
+    </GeneDef>
+</Defs>

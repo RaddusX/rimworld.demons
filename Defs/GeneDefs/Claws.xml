@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef ParentName="GeneHandsBase">
+        <defName>RaddusX_Demons_Claws_Gene</defName>
+        <label>claws</label>
+        <description>Carriers of this gene have humanlike hands ending in sharp claws, which are strong enough to be used as a weapon.</description>
+        <iconPath>UI/Icons/Genes/Claws</iconPath>
+        <displayCategory>RaddusX_Demon</displayCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <ForagedNutritionPerDay>0.1</ForagedNutritionPerDay>
+            <CrawlSpeed>0.1</CrawlSpeed>
+        </statFactors>
+        <modExtensions>
+            <li Class="VEF.Genes.GeneExtension">
+                <hediffsToBodyParts>
+                    <li>
+                        <hediff>RaddusX_Demons_Claws_Hediff</hediff>
+                        <bodyparts>
+                            <li>Hand</li>
+                            <li>Hand</li>
+                        </bodyparts>
+                    </li>
+                </hediffsToBodyParts>
+            </li>
+        </modExtensions>
+    </GeneDef>
+</Defs>

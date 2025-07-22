@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SoundDef>
+        <defName>RaddusX_Demons_Succubus_Sound_Call</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Voices/Succubus/Call</clipFolderPath>
+                    </li>
+                </grains>
+                <volumeRange>20</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>RaddusX_Demons_Succubus_Sound_Wounded</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Voices/Succubus/Wounded</clipFolderPath>
+                    </li>
+                </grains>
+                <volumeRange>20</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+                <sustainLoop>False</sustainLoop>
+                <repeatMode>NeverTwice</repeatMode>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>RaddusX_Demons_Succubus_Sound_Death</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Voices/Succubus/Death</clipFolderPath>
+                    </li>
+                </grains>
+                <volumeRange>20</volumeRange>
+                <pitchRange>0.95~1.05</pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

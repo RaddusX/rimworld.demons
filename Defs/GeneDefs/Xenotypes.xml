@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <XenotypeDef>
+        <defName>RaddusX_Demons_Incubus_Xenotype</defName>
+        <label>incubus</label>
+        <description>An incubus in his true form is always muscular and attractive, with long hair and intense eyes. His skin can be of any color, but is always smooth and silky. When not using his wings for flight, an incubus can fold them to drape across its shoulders like a cloak—many decorate both the inside and outside of their wings with tattoos, ink, or self-inflicted scars. Incubi stand between 6 and 6-1/2 feet tall and typically weigh 200 pounds.\n\nWhen not in battle, incubi serve as counselors, torturers, and companions for greater demons. They are also often conjured for similar roles by mortal spellcasters, although care must be taken in dalliances with incubi, for they delight in causing pain to their companions.\n\nLike succubi, incubi form from the chaotic evil souls of particularly lustful and rapacious mortals. Yet whereas succubi are subtle and methodical about using their charms to cause ruin, the typical incubus is forthright and forceful about his insatiable desires.</description>
+        <descriptionShort>An incubus (pl. incubi) is a type of demon formed from the souls of evil mortals obsessed with inflicting pain and the violent gratification of their own sexual desires. They appear as powerful, muscled humanoids with bat-like wings, attractive looks, and smooth skin.</descriptionShort>
+        <iconPath>UI/Icons/Xenotypes/Incubus</iconPath>
+        <combatPowerFactor>2.5</combatPowerFactor>
+        <displayPriority>-1001</displayPriority>
+        <inheritable>false</inheritable>
+        <genes>
+            <li>Ageless</li>
+            <li>ArchiteMetabolism</li>
+            <li>DiseaseFree</li>
+            <li>PerfectImmunity</li>
+            <li>TotalHealing</li>
+            <li>VRE_InnatePsylink</li>
+            <li>WoundHealing_SuperFast</li>
+            <li>PsychicAbility_Enhanced</li>
+            <li>Mood_Depressive</li>
+            <li>VRE_Maniac</li>
+            <li>MinTemp_LargeDecrease</li>
+            <li>MaxTemp_LargeIncrease</li>
+            <li>VRE_Aggression_ExtremelyAggressive</li>
+            <li>RaddusX_Demons_Incubus_Demon_Form_Gene</li>
+            <li>Beauty_Beautiful</li>
+            <li>RaddusX_Demons_Incubus_Horns_Gene</li>
+            <li>Body_Standard</li>
+            <li>Body_Hulk</li>
+            <li>Skin_PaleRed</li>
+            <li>Eyes_Red</li>
+            <li>StrongStomach</li>
+            <li>DarkVision</li>
+            <li>RaddusX_Demons_Claws_Gene</li>
+            <li>RaddusX_Demons_Wings_Gene</li>
+            <li>RaddusX_Demons_Tail_Gene</li>
+            <li>AptitudeStrong_Melee</li>
+            <li>AptitudeStrong_Social</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>RaddusX_Demons_Succubus_Xenotype</defName>
+        <label>succubus</label>
+        <description>A succubus, when in their natural form, resembles a supernaturally beautiful and alluring humanoid with a lithe figure and dangerously seductive features; most have a feminine true form, in contrast to incubi, who typically have a masculine true form. Despite their comeliness, succubi possess several clearly demonic attributes, including a pair of large bat-like wings sprouting from their shoulders, curved horns, clawed hands, and a sinuous, writhing tail. A succubus's victim rarely ever sees this form, as they are adept at shifting forms to become whatever their victims would find most attractive.</description>
+        <descriptionShort>Succubi, also known as lust demons, are demonic manifestations who tempt mortal souls with destructive lust, and engender misery and destruction through their seductive manipulations.</descriptionShort>
+        <iconPath>UI/Icons/Xenotypes/Succubus</iconPath>
+        <combatPowerFactor>2.5</combatPowerFactor>
+        <displayPriority>-1001</displayPriority>
+        <inheritable>false</inheritable>
+        <genes>
+            <li>Ageless</li>
+            <li>ArchiteMetabolism</li>
+            <li>DiseaseFree</li>
+            <li>PerfectImmunity</li>
+            <li>TotalHealing</li>
+            <li>VRE_InnatePsylink</li>
+            <li>WoundHealing_SuperFast</li>
+            <li>PsychicAbility_Enhanced</li>
+            <li>Mood_Depressive</li>
+            <li>VRE_Maniac</li>
+            <li>MinTemp_LargeDecrease</li>
+            <li>MaxTemp_LargeIncrease</li>
+            <li>VRE_Aggression_ExtremelyAggressive</li>
+            <li>RaddusX_Demons_Succubus_Demon_Form_Gene</li>
+            <li>Beauty_Beautiful</li>
+            <li>RaddusX_Demons_Succubus_Horns_Gene</li>
+            <li>Body_Standard</li>
+            <li>Body_Thin</li>
+            <li>Skin_PaleRed</li>
+            <li>Eyes_Red</li>
+            <li>StrongStomach</li>
+            <li>DarkVision</li>
+            <li>RaddusX_Demons_Claws_Gene</li>
+            <li>RaddusX_Demons_Wings_Gene</li>
+            <li>RaddusX_Demons_Tail_Gene</li>
+            <li>AptitudeTerrible_Mining</li>
+            <li>AptitudeRemarkable_Social</li>
+        </genes>
+    </XenotypeDef>
+
+</Defs>

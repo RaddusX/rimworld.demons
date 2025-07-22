@@ -1,0 +1,48 @@
+<ModMetaData>
+    <name>RaddusX's Demons</name>
+    <author>RaddusX</author>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <packageId>raddusx.demons</packageId>
+    <modDependencies>
+
+        <!-- Harmony -->
+        <!--<li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/</downloadUrl>
+        </li>-->
+
+        <!-- Biotech -->
+        <li>
+            <packageId>Ludeon.RimWorld.Biotech</packageId>
+            <displayName>Biotech</displayName>
+        </li>
+
+        <!-- Royalty -->
+        <li>
+            <packageId>Ludeon.RimWorld.Royalty</packageId>
+            <displayName>Royalty</displayName>
+        </li>
+
+        <!-- Vanilla Expanded Framework -->
+        <li>
+            <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+            <displayName>Vanilla Expanded Framework</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2023507013</steamWorkshopUrl>
+            <downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
+        </li>
+
+        <!-- Vanilla Races Expanded - Archon -->
+        <li>
+            <packageId>vanillaracesexpanded.archon</packageId>
+            <displayName>Vanilla Races Expanded - Archon</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/3067715093</steamWorkshopUrl>
+            <downloadUrl>https://github.com/Vanilla-Expanded/VanillaRacesExpanded-Archon</downloadUrl>
+        </li>
+        
+    </modDependencies>
+    <description>My demons mod currently consisting of 2 Xenotypes (Incubus and Succubus). Please see Steam workshop page for full details. I kept this description short as it was producing an error. </description>
+</ModMetaData>

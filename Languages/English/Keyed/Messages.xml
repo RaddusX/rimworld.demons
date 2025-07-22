@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <RaddusX.Demons.LoggingEnabled.Label>Logging Enabled?</RaddusX.Demons.LoggingEnabled.Label>
+    <RaddusX.Demons.LoggingEnabled.Tooltip>Whether to enable logging (for debugging purposes). Default OFF.</RaddusX.Demons.LoggingEnabled.Tooltip>
+
+    <!-- "Cannot use Draining Kiss on Sanguophages, Succubi, or Incubi." -->
+    <RaddusX.Demons.DrainingKissAbility.InvalidTarget>Cannot use {0} on Sanguophages, Succubi, or Incubi.</RaddusX.Demons.DrainingKissAbility.InvalidTarget>
+
+    <!-- "This was caused by John Smith using their Draining Kiss ability on them, and failing." -->
+    <RaddusX.Demons.DrainingKissAbility.TargetBerserkReason>This was caused by {0} using their {1} ability on them, and failing.</RaddusX.Demons.DrainingKissAbility.TargetBerserkReason>
+    
+</LanguageData>
