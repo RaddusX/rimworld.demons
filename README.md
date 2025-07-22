@@ -30,7 +30,15 @@ Mods I recommend if you wish them to appear as they do in the screenshot(s).
 - [Sized Apparel (for bodies/clothing)](https://gitgud.io/jikulopo/sized-apparel-zero)
 - [Bread Mo's Valentine's Day apparel](https://steamcommunity.com/sharedfiles/filedetails/?id=3295274246)
 
-# Build Assembly
+# Compile Source
+For developers, testers, or simply those who wish to build the assembly themselves.<br/>
+This mod was built using Visual Studio Code and [https://github.com/Rimworld-Mods/Template](https://github.com/Rimworld-Mods/Template).<br/>
+You need:
+- [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
+- [.Net Framework 4.8 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [Visual Studio Code - C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+
+Once the above is done, you just need to do this to build the assembly:
 - Navigate to the .vscode directory and then type "dotnet build".
 
 # Succubus & Incubus - Shared Genes
