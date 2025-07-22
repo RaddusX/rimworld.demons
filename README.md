@@ -89,7 +89,7 @@ Once the above is done, you just need to do this to build the assembly:
 - I modified the position of the wings and tail specifically for this mod.
 
 # License
-- [CC BY-NC-ND 4.0](creativecommons.org/licenses/by-nc-nd/4.0/deed.en)
+- [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 # Planned Features
 In no particular order:
@@ -126,16 +126,16 @@ In no particular order:
 - [Vanilla Races Expanded - Archon](https://steamcommunity.com/sharedfiles/filedetails/?id=3067715093) (extremely aggressive, natural psylink, & maniac genes)
 - [ReSplice: Charmweavers](https://steamcommunity.com/sharedfiles/filedetails/?id=3131996691) for the lovely horns (not all horns are from this mod but most are), wings, and tail gene graphics.
 - [More Mini-Horns](https://steamcommunity.com/sharedfiles/filedetails/?id=3151668881) for additional mini-horn textures for Succubi & Incubi. The default mini horn texture ("MiniHorns_east,south,north" etc) is actually higher resolution than the others and I'm trying to remember where I got it from...
-- [github.com/Rimworld-Mods/Template](github.com/Rimworld-Mods/Template) for the Visual Studio Code template
-- [deepai.org](deepai.org) for some images which I then modified. I'm a novice designer. I would like to have custom graphics made for everything in the future.
+- [github.com/Rimworld-Mods/Template](https://github.com/Rimworld-Mods/Template) for the Visual Studio Code template
+- [deepai.org](https://deepai.org) for some images which I then modified. I'm a novice designer. I would like to have custom graphics made for everything in the future.
 - Thank you to the following creators for their amazing sounds!
-  - [pixabay.com/sound-effects/female-voice-burst-43245](pixabay.com/sound-effects/female-voice-burst-43245) (Succubus Death Sound)
-  - [pixabay.com/sound-effects/female-compasive-voice-98423](pixabay.com/sound-effects/female-compasive-voice-98423) (Succubus Idle Sound)
-  - [pixabay.com/sound-effects/female-hurt-2-94301](pixabay.com/sound-effects/female-hurt-2-94301) (Succubus Hurt Sound)
-  - [pixabay.com/sound-effects/female-scream-short-251067](pixabay.com/sound-effects/female-scream-short-251067) (Succubus Hurt Sound)
-  - [pixabay.com/sound-effects/giggle-339074](pixabay.com/sound-effects/giggle-339074) (Succubus Idle Sound)
-  - [pixabay.com/sound-effects/giggle-86362](pixabay.com/sound-effects/giggle-86362) (Succubus Idle Sound)
-  - [pixabay.com/sound-effects/girl-chucklewav-14669](pixabay.com/sound-effects/girl-chucklewav-14669) (Succubus Idle Sound)
-  - [pixabay.com/sound-effects/kiss-sound-effect-43309](pixabay.com/sound-effects/kiss-sound-effect-43309) (Draining Kiss ability sound)
-  - [pixabay.com/sound-effects/swoosh-6428](pixabay.com/sound-effects/swoosh-6428) (Polymorph ability sound)
+  - [pixabay.com/sound-effects/female-voice-burst-43245](https://pixabay.com/sound-effects/female-voice-burst-43245) (Succubus Death Sound)
+  - [pixabay.com/sound-effects/female-compasive-voice-98423](https://pixabay.com/sound-effects/female-compasive-voice-98423) (Succubus Idle Sound)
+  - [pixabay.com/sound-effects/female-hurt-2-94301](https://pixabay.com/sound-effects/female-hurt-2-94301) (Succubus Hurt Sound)
+  - [pixabay.com/sound-effects/female-scream-short-251067](https://pixabay.com/sound-effects/female-scream-short-251067) (Succubus Hurt Sound)
+  - [pixabay.com/sound-effects/giggle-339074](https://pixabay.com/sound-effects/giggle-339074) (Succubus Idle Sound)
+  - [pixabay.com/sound-effects/giggle-86362](https://pixabay.com/sound-effects/giggle-86362) (Succubus Idle Sound)
+  - [pixabay.com/sound-effects/girl-chucklewav-14669](https://pixabay.com/sound-effects/girl-chucklewav-14669) (Succubus Idle Sound)
+  - [pixabay.com/sound-effects/kiss-sound-effect-43309](https://pixabay.com/sound-effects/kiss-sound-effect-43309) (Draining Kiss ability sound)
+  - [pixabay.com/sound-effects/swoosh-6428](https://pixabay.com/sound-effects/swoosh-6428) (Polymorph ability sound)
 - DND & Pathfinder for xenotype descriptions, ideas for the xenotype, and & ability ideas.
