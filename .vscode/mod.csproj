@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net480</TargetFramework>
+        <PlatformTarget>x64</PlatformTarget>
+        <LangVersion>8.0</LangVersion> <!-- for default null values in methods and elsewhere. Previously unspecififed, 7.3? -->
+        <!--<Nullable>enable</Nullable>--> <!-- previously missing -->
+
+        <!-- Modify [RootNamespace], [AssemblyName], [OutputPath], [VersionPrefix] -->
+        <RootNamespace>RaddusX</RootNamespace>
+        <AssemblyName>Demons</AssemblyName>
+        <OutputPath>../Assemblies</OutputPath>
+        <VersionPrefix>0.1.0.0</VersionPrefix>
+
+        <!-- Do not generate pdb file -->
+        <DebugType>none</DebugType>
+
+        <DebugSymbols>false</DebugSymbols>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+        <RimWorldPath Condition="'$(RimWorldPath)' == '' AND '$(OS)' == 'Windows_NT'">../../../RimWorldWin64_Data/Managed</RimWorldPath>
+        <RimWorldPath Condition="'$(RimWorldPath)' == '' AND '$(OS)' != 'Windows_NT'">../../../RimWorldLinux_Data/Managed</RimWorldPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Mod -->
+        <Compile Include="../Source/*" />
+        <Compile Include="../Source/Abilities/*" />
+        <Compile Include="../Source/Genes/*" />
+        <Compile Include="../Source/ModSettings/*" />
+        <Compile Include="../Source/Thoughts/*" />
+        <Compile Include="../Source/Utility/*" />
+        
+        <!-- Rimworld -->
+        <Reference Include="$(RimWorldPath)/*.dll">
+            <Private>False</Private>
+        </Reference>
+        
+        <!-- Harmony -->
+        <!--
+        <Reference Include="../../../../../workshop/content/294100/2009463077/Current/Assemblies/0Harmony.dll">
+            <Private>False</Private>
+        </Reference>
+        -->
+    </ItemGroup>
+</Project>
