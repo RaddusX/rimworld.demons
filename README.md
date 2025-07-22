@@ -30,6 +30,9 @@ Mods I recommend if you wish them to appear as they do in the screenshot(s).
 - [Sized Apparel (for bodies/clothing)](https://gitgud.io/jikulopo/sized-apparel-zero)
 - [Bread Mo's Valentine's Day apparel](https://steamcommunity.com/sharedfiles/filedetails/?id=3295274246)
 
+# Build Assembly
+- Navigate to the .vscode directory and then type "dotnet build".
+
 # Succubus & Incubus - Shared Genes
 - Archite (Ageless, Archite metabolism, Non-senescent, Perfect immunity, Scarless, Natural psylink)
 - Normal (Superfast wound healing, Psy-sensitive, Very unhappy, Maniac, Cold super-tolerant, Heat super-tolerant, Extremely aggressive, Very attractive, Strong stomach, Dark vision, Wings, Spiked tail, Claws, Red eyes)
