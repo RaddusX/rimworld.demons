@@ -44,5 +44,12 @@
         </li>
         
     </modDependencies>
-    <description>My demons mod currently consisting of 2 Xenotypes (Incubus and Succubus). Please see Steam workshop page for full details. I kept this description short as it was producing an error. </description>
+    <description>My demons mod currently consisting of 2 Xenotypes (Incubus and Succubus). 
+    
+    For full details see:
+
+    - Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=3531834757
+    - GitHub page: https://github.com/RaddusX/rimworld.demons
+    
+    </description>
 </ModMetaData>
