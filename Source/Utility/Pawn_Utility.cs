@@ -117,6 +117,18 @@ namespace RaddusX.Demons.Utility
         }
 
         /**
+         * Whether the pawn is a demon xenotype (currently, succubus or incubus)
+         *
+         * @param Pawn  pawn  The pawn
+         *
+         * @return bool
+        */
+        public static bool IsDemonXenotype(Pawn pawn)
+        {
+            return IsIncubusXenotype(pawn) || IsSuccubusXenotype(pawn);
+        }
+
+        /**
          * Whether the pawn has the Incubus Xenotype.
          *
          * @param Pawn  pawn  The pawn

@@ -44,8 +44,8 @@ namespace RaddusX.Demons.Abilities
 
             Pawn target = localTargetInfo.Pawn;
 
-            // Target has Hemogen gene or has the Sanguophage Xenotype. Skip.
-            if (Pawn_Utility.IsHemogenic(target) || Pawn_Utility.IsSanguophageXenotype(target))
+            // Target is a Sanguophage (or has Hemogenic gene), or is a demon (succubus or incubus)
+            if (Pawn_Utility.IsHemogenic(target) || Pawn_Utility.IsSanguophageXenotype(target) || Pawn_Utility.IsDemonXenotype(target))
             {
                 if (throwMessages)
                 {
