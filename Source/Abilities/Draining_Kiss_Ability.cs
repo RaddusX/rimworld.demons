@@ -26,8 +26,8 @@ namespace RaddusX.Demons.Abilities
         /**
         * Called when checking if the Ability can be used on the target
         *
-        * @param LocalTargetInfo       target    The target of the ability
-        * @param LocalTargetInfo|null  _unused   NULL
+        * @param LocalTargetInfo   target         The target of the ability
+        * @param bool              throwMessages  (Default true) Whether to display messages at the top left of the screen, when the ability cannot be used for example.
         *
         * @return bool
        */
@@ -155,19 +155,17 @@ namespace RaddusX.Demons.Abilities
             // Add Drained hediff
             caster.health.AddHediff(Defs.RaddusX_Demons_Draining_Kiss_Caster_Drained_Hediff);
 
-            //Thought_Memory thought = ThoughtMaker.MakeThought(Defs.RaddusX_Demons_Tried_To_Drain_Me_Negative_Thought, 0);
+            // Give target a negative thought towards the caster since they tried to drain them
             Thought_Memory thought = ThoughtMaker.MakeThought(Defs.RaddusX_Demons_Tried_To_Drain_Me_Negative_Thought, 0);
-
             if (thought == null)
             {
                 Logging_Utility.LogMessage("thought is null");
-                return;
             }
-
-            Logging_Utility.LogMessage("thought is not null");
-
-            // Give target a negative thought towards the caster since they tried to drain them
-            target.needs.mood.thoughts.memories.TryGainMemory(thought, caster);
+            else
+            {
+                Logging_Utility.LogMessage("thought is not null");
+                target.needs.mood.thoughts.memories.TryGainMemory(thought, caster);
+            }
 
             // Make victim hostile & attack the caster (if capable)
             if (target.Downed)
@@ -250,7 +248,7 @@ namespace RaddusX.Demons.Abilities
         */
         private void TransformTarget(Pawn target, Pawn caster)
         {
-            Logging_Utility.LogMessage("RaddusX.Demons.Draining_Kiss_Ability_Effect.DrainPawn() Called");
+            Logging_Utility.LogMessage("RaddusX.Demons.Draining_Kiss_Ability_Effect.TransformTarget() Called");
 
             // Change Xenotype
             target.genes.SetXenotype(XenotypeDefOf.Sanguophage);

@@ -77,7 +77,7 @@ namespace RaddusX.Demons.Abilities
                 GeneDef pawnHumanFormGeneDef = Pawn_Utility.GetHumanFormXenogeneDef(pawn);
                 pawn.genes.AddGene(pawnHumanFormGeneDef, xenogene: true);
 
-                // Override Horns, Claws, Wings, Tail, and Skin Color
+                // Override Horns, Claws, Wings, Tail, and eye & skin color
                 AddHumanFormGeneOverrides(pawn);
             }
             else // Human form - Switch to Demon form
@@ -108,7 +108,7 @@ namespace RaddusX.Demons.Abilities
         }
 
         /**
-         * Add overrides for horns/claws/wings/tail/skin color when transforming into the human form.
+         * Add overrides for horns/claws/wings/tail/eye color/skin color when transforming into the human form.
          *
          * Overrides are added so that specific genes are disabled, for example so that horns are no longer displayed when in human form.
          *
@@ -126,7 +126,7 @@ namespace RaddusX.Demons.Abilities
                 return;
             }
 
-            // Add Override for Horns, Claws, Wings, Tail, and Skin Color
+            // Add Override for Horns, Claws, Wings, Tail, and eye & skin color
             if (Pawn_Utility.IsIncubusXenotype(pawn))
             {
                 Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Incubus_Horns_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
@@ -140,7 +140,6 @@ namespace RaddusX.Demons.Abilities
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Tail_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
 
             // Skin doesn't update even if it's being overwritten, so we'll remove it instead.
-            Pawn_Utility.GetXenotypeGene(Defs.Skin_PaleRed, pawn)?.OverrideBy(pawnHumanFormGene);
             Gene pawnPaleRedSkinGene = Pawn_Utility.GetXenotypeGene(Defs.Skin_PaleRed, pawn);
             if (pawnPaleRedSkinGene != null)
             {
@@ -175,7 +174,7 @@ namespace RaddusX.Demons.Abilities
             GeneDef demonFormGeneDef = Pawn_Utility.GetDemonFormXenogeneDef(pawn);
             pawn.genes.AddGene(demonFormGeneDef, xenogene: true);
 
-            // Remove Override for Horns, Claws, Wings, Tail, and Skin Color
+            // Remove Override for Horns, Claws, Wings, Tail, and eye & skin color
             if (Pawn_Utility.IsIncubusXenotype(pawn))
             {
                 Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Incubus_Horns_Gene, pawn)?.OverrideBy(null);
