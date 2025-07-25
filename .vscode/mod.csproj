@@ -10,7 +10,7 @@
         <RootNamespace>RaddusX</RootNamespace>
         <AssemblyName>Demons</AssemblyName>
         <OutputPath>../Assemblies</OutputPath>
-        <VersionPrefix>1.0.1</VersionPrefix> <!-- don't forget to change version in About.xml -->
+        <VersionPrefix>1.0.2</VersionPrefix> <!-- don't forget to change version in About.xml -->
 
         <!-- Do not generate pdb file -->
         <DebugType>none</DebugType>

@@ -135,16 +135,31 @@ namespace RaddusX.Demons.Abilities
             {
                 Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Succubus_Horns_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
             }
-            Pawn_Utility.GetXenotypeGene(Defs.Eyes_Red, pawn)?.OverrideBy(pawnHumanFormGene);
+
+            // Disable red eyes
+            Gene redEyesGene = Pawn_Utility.GetXenotypeGene(Defs.Eyes_Red, pawn);
+            if (redEyesGene != null)
+            {
+                // Override red eyes xenogene by the human form xenogene
+                redEyesGene.OverrideBy(pawnHumanFormGene);
+
+                // If any endogene is being overwritten by the red eyes xenogene, remove it
+                Pawn_Utility.RemoveGeneOverrideFromAllEndogenes(redEyesGene, pawn);
+
+                // Remove red eyes xenogene, otherwise it'll still be overwritten by the eye endogene when polymorphing back
+                Pawn_Utility.RemoveAllXenogenesOfGeneDef(Defs.Eyes_Red, pawn);
+            }
+
+            // Disable claws gene
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Claws_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
+
+            // Disable tail gene
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Tail_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
 
+            // Disable red skin gene
             // Skin doesn't update even if it's being overwritten, so we'll remove it instead.
-            Gene pawnPaleRedSkinGene = Pawn_Utility.GetXenotypeGene(Defs.Skin_PaleRed, pawn);
-            if (pawnPaleRedSkinGene != null)
-            {
-                pawn.genes.RemoveGene(pawnPaleRedSkinGene);
-            }
+            // Remove all instances of the red skin xenogene (f.e. incase there are multiple instances that were added via dev mode)
+            Pawn_Utility.RemoveAllXenogenesOfGeneDef(Defs.Skin_PaleRed, pawn);
 
             // Wings doesn't get overridden once the skin color gene above is removed, so we'll add the overwrite here:
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Wings_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
@@ -184,7 +199,9 @@ namespace RaddusX.Demons.Abilities
                 Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Succubus_Horns_Gene, pawn)?.OverrideBy(null);
             }
 
-            Pawn_Utility.GetXenotypeGene(Defs.Eyes_Red, pawn)?.OverrideBy(null);
+            // Add red eyes gene
+            pawn.genes.AddGene(Defs.Eyes_Red, xenogene: true);
+
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Claws_Gene, pawn)?.OverrideBy(null);
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Wings_Gene, pawn)?.OverrideBy(null);
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Tail_Gene, pawn)?.OverrideBy(null);

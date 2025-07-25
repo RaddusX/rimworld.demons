@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using RimWorld;
@@ -8,19 +9,61 @@ namespace RaddusX.Demons.Utility
     public static class Pawn_Utility
     {
         #nullable enable
+        
+        /**
+        * Remove the specified Gene as an override on all endogenes on the specified pawn
+        *
+        * @param Gene  gene  The gene
+        * @param Pawn  pawn  The pawn
+        *
+        * @return bool True if at least one gene had this override and it was removed.
+        **/
+        public static bool RemoveGeneOverrideFromAllEndogenes(Gene gene, Pawn pawn)
+        {
+            bool removedOverrideAtLeastOnce = false;
+            foreach (var endogene in pawn.genes.Endogenes)
+            {
+                if (endogene.overriddenByGene == gene)
+                {
+                    removedOverrideAtLeastOnce = true;
+                    endogene.OverrideBy(null);
+                }
+            }
+            return removedOverrideAtLeastOnce;
+        }
+
+        /**
+        * Remove all xenogenes of the specified GeneDef on the specified Pawn.
+        *
+        * @param GeneDef geneDef  The GeneDef
+        * @param Pawn    pawn     The pawn
+        *
+        * @return void
+        **/
+        public static void RemoveAllXenogenesOfGeneDef(GeneDef geneDef, Pawn pawn)
+        {
+            for (int i = pawn.genes.Xenogenes.Count - 1; i >= 0; --i)
+            {   
+                if (pawn.genes.Xenogenes[i].def == geneDef)
+                {
+                    pawn.genes.RemoveGene(pawn.genes.Xenogenes[i]);
+                }
+            }
+        }
+
         /**
         * Get the specified gene from the specified pawn's xenotype.
         *
-        * @param string defName The name of the gene definition
-        * @param Pawn   pawn    The pawn
+        * @param GeneDef geneDef  The GeneDef
+        * @param Pawn    pawn     The pawn
         *
         * @return Gene|null
         **/
-        public static Gene? GetXenotypeGene(GeneDef defName, Pawn pawn)
+        public static Gene? GetXenotypeGene(GeneDef geneDef, Pawn pawn)
         {
             foreach (var xenogene in pawn.genes.Xenogenes)
             {
-                if (xenogene.def == defName)
+                if (xenogene.def == geneDef)
                 {
                     return xenogene;
                 }
