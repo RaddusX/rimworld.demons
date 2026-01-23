@@ -10,7 +10,7 @@
         <RootNamespace>RaddusX</RootNamespace>
         <AssemblyName>Demons</AssemblyName>
         <OutputPath>../Assemblies</OutputPath>
-        <VersionPrefix>1.0.2</VersionPrefix> <!-- don't forget to change version in About.xml -->
+        <VersionPrefix>1.0.3</VersionPrefix> <!-- don't forget to change version in About.xml -->
 
         <!-- Do not generate pdb file -->
         <DebugType>none</DebugType>
@@ -23,11 +23,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+
         <!-- Mod -->
         <Compile Include="../Source/*" />
         <Compile Include="../Source/Abilities/*" />
         <Compile Include="../Source/Genes/*" />
         <Compile Include="../Source/ModSettings/*" />
+        <Compile Include="../Source/Patches/*" />
         <Compile Include="../Source/Thoughts/*" />
         <Compile Include="../Source/Utility/*" />
         
@@ -35,6 +37,16 @@
         <Reference Include="$(RimWorldPath)/*.dll">
             <Private>False</Private>
         </Reference>
+
+        <!-- (Optional Dependency) [NL] Facial Animation - WIP -->
+        <Reference Include="../../../../../workshop/content/294100/1635901197/1.6/Assemblies/FacialAnimation.dll">
+            <Private>False</Private>
+        </Reference>
+
+        <!-- (Optional Dependency) Humanoid Alien Races (HAR) -->
+        <!--<Reference Include="../../../../../workshop/content/294100/839005762/1.6/Assemblies/AlienRace.dll">
+            <Private>False</Private>
+        </Reference>-->
         
         <!-- Harmony -->
         <!--

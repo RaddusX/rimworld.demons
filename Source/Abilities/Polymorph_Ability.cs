@@ -4,6 +4,7 @@ using Verse;
 using RimWorld;
 
 using RaddusX.Demons.Utility;
+using RaddusX.Demons.Patches;
 
 namespace RaddusX.Demons.Abilities
 {
@@ -77,13 +78,14 @@ namespace RaddusX.Demons.Abilities
                 GeneDef pawnHumanFormGeneDef = Pawn_Utility.GetHumanFormXenogeneDef(pawn);
                 pawn.genes.AddGene(pawnHumanFormGeneDef, xenogene: true);
 
-                // Override Horns, Claws, Wings, Tail, and eye & skin color
+                // Override Horns, Claws, Wings, Tail, Eye & Skin color
                 AddHumanFormGeneOverrides(pawn);
             }
             else // Human form - Switch to Demon form
             {
                 Logging_Utility.LogMessage("Pawn is in HUMAN form. Changing to DEMON form...");
 
+                // Remove override for Horns, Claws, Wings, Tail, Eye & Skin color
                 RemoveHumanFormGeneOverrides(pawn);
             }
 
@@ -103,8 +105,21 @@ namespace RaddusX.Demons.Abilities
             * Update pawn gfx
             */
 
-            // Appearance doesn't update automatically unless f.e. changing/removing clothes, loading a save, thus we need to do this:
-            pawn.Drawer.renderer.SetAllGraphicsDirty();
+            pawn.Drawer.renderer.renderTree.SetDirty();
+
+            pawn.Drawer.renderer.SetAllGraphicsDirty(); // since this doesn't do anything if the rendertree is resolved, the above call ensures it does
+
+            // [NL] Facial Animation
+            if (ModLister.GetActiveModWithIdentifier("Nals.FacialAnimation") != null)
+            {
+                Logging_Utility.LogMessage("Is the [NL] Facial Animation - WIP mod active? Yes.");
+
+                NL_Facial_Animation_Patcher.SetDirty(pawn);
+            }
+            else
+            {
+                Logging_Utility.LogMessage("Is the [NL] Facial Animation - WIP mod active? No. Skipped notifying it of changes.");
+            }
         }
 
         /**
@@ -120,13 +135,14 @@ namespace RaddusX.Demons.Abilities
         {
             Gene pawnHumanFormGene = Pawn_Utility.GetHumanFormXenogene(pawn);
 
+            // Pawn doesn't have the human form gene
             if (pawnHumanFormGene == null)
             {
                 Logging_Utility.LogMessage("Pawn doesn't have the HUMAN form gene. SKIPPED ADDING OVERRIDES for horns/claws/wings/tail/skin color genes.");
                 return;
             }
 
-            // Add Override for Horns, Claws, Wings, Tail, and eye & skin color
+            // Disable Horns
             if (Pawn_Utility.IsIncubusXenotype(pawn))
             {
                 Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Incubus_Horns_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
@@ -143,7 +159,7 @@ namespace RaddusX.Demons.Abilities
                 // Override red eyes xenogene by the human form xenogene
                 redEyesGene.OverrideBy(pawnHumanFormGene);
 
-                // If any endogene is being overwritten by the red eyes xenogene, remove it
+                // If any endogene is being overwritten by the red eyes xenogene, remove the override
                 Pawn_Utility.RemoveGeneOverrideFromAllEndogenes(redEyesGene, pawn);
 
                 // Remove red eyes xenogene, otherwise it'll still be overwritten by the eye endogene when polymorphing back
@@ -156,12 +172,27 @@ namespace RaddusX.Demons.Abilities
             // Disable tail gene
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Tail_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
 
-            // Disable red skin gene
-            // Skin doesn't update even if it's being overwritten, so we'll remove it instead.
-            // Remove all instances of the red skin xenogene (f.e. incase there are multiple instances that were added via dev mode)
-            Pawn_Utility.RemoveAllXenogenesOfGeneDef(Defs.Skin_PaleRed, pawn);
+            /*
+            * Disable Red Skin Color
+            */
 
-            // Wings doesn't get overridden once the skin color gene above is removed, so we'll add the overwrite here:
+            // Override gene
+            Pawn_Utility.GetXenotypeGene(Defs.Skin_PaleRed, pawn)?.OverrideBy(pawnHumanFormGene);
+
+            // The override above isn't enough to ensure the skin color updates, so we also need
+            // to set the skin color to the color of their active skin color endogene.
+            Gene activeSkinColorEndogene = Pawn_Utility.GetActiveSkinColorEndogene(pawn);
+            if (activeSkinColorEndogene != null)
+            {
+                Logging_Utility.LogMessage($"activeSkinColorEndogene.def.skinColorBase: {activeSkinColorEndogene.def.skinColorBase}");
+
+                pawn.story.skinColorOverride = activeSkinColorEndogene.def.skinColorBase;
+            }
+
+            /*
+            * Disable Wings
+            */
+
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Wings_Gene, pawn)?.OverrideBy(pawnHumanFormGene);
         }
 
@@ -176,6 +207,7 @@ namespace RaddusX.Demons.Abilities
         {
             Gene pawnHumanFormGene = Pawn_Utility.GetHumanFormXenogene(pawn);
 
+            // Pawn doesn't have the human form gene
             if (pawnHumanFormGene == null)
             {
                 Logging_Utility.LogMessage("Pawn doesn't have the HUMAN form gene. SKIPPED REMOVING OVERRIDES for horns/claws/wings/tail/skin color genes.");
@@ -189,7 +221,7 @@ namespace RaddusX.Demons.Abilities
             GeneDef demonFormGeneDef = Pawn_Utility.GetDemonFormXenogeneDef(pawn);
             pawn.genes.AddGene(demonFormGeneDef, xenogene: true);
 
-            // Remove Override for Horns, Claws, Wings, Tail, and eye & skin color
+            // Disable horns
             if (Pawn_Utility.IsIncubusXenotype(pawn))
             {
                 Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Incubus_Horns_Gene, pawn)?.OverrideBy(null);
@@ -202,12 +234,27 @@ namespace RaddusX.Demons.Abilities
             // Add red eyes gene
             pawn.genes.AddGene(Defs.Eyes_Red, xenogene: true);
 
+            // Disable claws gene
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Claws_Gene, pawn)?.OverrideBy(null);
+
+            // Disable wings gene
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Wings_Gene, pawn)?.OverrideBy(null);
+
+            // Disable tails gene
             Pawn_Utility.GetXenotypeGene(Defs.RaddusX_Demons_Tail_Gene, pawn)?.OverrideBy(null);
 
-            // Skin doesn't update even if being overwritten, so we'll need to add it back now:
-            pawn.genes.AddGene(Defs.Skin_PaleRed, xenogene: true);
+            /*
+                Enable Red Skin Color
+            */
+
+            Gene redSkinColorGene = Pawn_Utility.GetXenotypeGene(Defs.Skin_PaleRed, pawn);
+
+            if (redSkinColorGene != null)
+            {
+                redSkinColorGene.OverrideBy(null);
+                Logging_Utility.LogMessage($"redSkinColorGene.def.skinColorOverride: {redSkinColorGene.def.skinColorOverride}");
+                pawn.story.skinColorOverride = redSkinColorGene.def.skinColorOverride;
+            }
         }
     }
 }

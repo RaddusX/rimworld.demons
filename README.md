@@ -19,6 +19,7 @@ Currently this mod contains Succubus & Incubus Xenotypes, but I may expand it in
 Mods I recommend if you wish them to appear as they do in the screenshot(s).
 - [[NL] Facial Animation - WIP](https://steamcommunity.com/sharedfiles/filedetails/?id=1635901197)
 - [[NL] Facial Animation - Experimentals](https://steamcommunity.com/sharedfiles/filedetails/?id=2581693737)
+- [[BT] SpawnThoseGenes!](https://steamcommunity.com/sharedfiles/filedetails/?id=2898044088)
 - [[BT] EyeGenes2 | Base - [NL] Facial Animation](https://steamcommunity.com/sharedfiles/filedetails/?id=2898151329)
 - [UNAGI Facial Animation](https://steamcommunity.com/sharedfiles/filedetails/?id=3268178647)
 - [UNAGI Facial Animation.biotech](https://steamcommunity.com/sharedfiles/filedetails/?id=3287187828)
@@ -78,11 +79,9 @@ Once the above is done, you just need to do this to build the assembly:
 - Both Incubi, & Succubi (except w/ Draining Kiss ability), can only regain psyfocus through Sex (RJW only - see note below), or by meditating on their throne. (However, I thought this would prevent them from meditating anywhere else but they still sometimes meditated in their rooms for example. In 1.5 at least. I think this is vanilla behavior or a bug.)
 - Psyfocus currently isn't gained when using the vanilla Lovin' feature. I plan on adding support for this in the future.
 
-# Incompatibilities
-- Humanoid Alien Races (HAR): It's a minor incompatibility I recently noticed. When polymorphing into human form, the red skin color isn't removed. I'm surprised this happens as the gene that gives this skin color is actually removed when changing to human form. However, if you're using Biotech, you probably aren't using this mod. I happened to notice it because I was recently trying out a mod that used HAR.
-
 # RJW Compatibility
-- The Sex meditation focus from this mod is used, so that psyfocus can be regained through sex.
+- This mod is compatible with RJW.
+- The Sex meditation focus is used so that psyfocus can be regained through sex.
 - The Sex need will decrease 100% faster for Incubi & Succubi. It probably sounds faster than it actually is. I recommend checking your RJW settings to make sure the Sex need decay rate is set to 100%. 
 
 # OTYOTY / Zero's Sized Apparel Compatibility
@@ -101,7 +100,7 @@ In no particular order:
 - Add lore for the xenotypes. I'm not sure whether I'll keep them as DND/Pathfinder inspired xenotypes, or try to integrate them further into the RimWorld lore. Or I could even release them separately.
 - Prevent Succubi & Incubi from being implanted by Sanguophages (and other xenotypes, subject to review)
 - Add a way for pawns to be transformed into a Succubus/Incubus e.g. through a ritual. I didn't want to use an implanter gene/ability for this.
-- Ensuring offspring of the xenotypes is of the correct xenotype. I decided on making them xenotypes with xenogenes so that when polymorphing they will use their germline genes for skin and eye color. There are mods that can improve the offspring gene inheritance such as Better Gene Inheritance, but there isn't a mod to my knowledge which ensures the offspring is of the same xenotype to my knowledge (or allow you to choose). However, I plan on making the offspring xenotype selection a bit more complex depending on the parents, especially when maybe adding future demon types.
+- Ensuring offspring of the xenotypes is of the correct xenotype. I decided on making them xenotypes with xenogenes so that when polymorphing they will use their germline genes for skin and eye color. There are mods that can improve the offspring gene inheritance such as Better Gene Inheritance, but there isn't a mod to my knowledge which ensures the offspring is of the same xenotype (or allow you to choose). However, I plan on making the offspring xenotype selection a bit more complex depending on the parents, especially when maybe adding future demon types.
 - Possibly disallowing the human form from being used indefinitely. Though, currently they are slightly hungrier in human form so that may suffice.
 - Possibly having the human form be auto-equipped by the AI to remove the negative social impact and so on.
 - Possibly allowing the user to choose if the negative social impact when in demon form is always active or only if they have line of sight (current default).
@@ -139,4 +138,5 @@ In no particular order:
   - [pixabay.com/sound-effects/girl-chucklewav-14669](https://pixabay.com/sound-effects/girl-chucklewav-14669) (Succubus Idle Sound)
   - [pixabay.com/sound-effects/kiss-sound-effect-43309](https://pixabay.com/sound-effects/kiss-sound-effect-43309) (Draining Kiss ability sound)
   - [pixabay.com/sound-effects/swoosh-6428](https://pixabay.com/sound-effects/swoosh-6428) (Polymorph ability sound)
-- DND & Pathfinder for xenotype descriptions, ideas for the xenotype, and & ability ideas.
+- DND & Pathfinder for xenotype descriptions, ideas for the xenotype, and ability ideas.
+- Marnador for the [RimWorld fan made font](https://ludeon.com/forums/index.php?topic=11022.0)!

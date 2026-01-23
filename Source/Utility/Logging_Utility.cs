@@ -1,10 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-using UnityEngine;
-using Verse;
-using Verse.Sound;
-using RimWorld;
+﻿using Verse;
 
 using RaddusX.Demons.ModSettings;
 
@@ -16,7 +10,7 @@ namespace RaddusX.Demons.Utility
         {
             if (Mod_Settings_Utility.IsLoggingEnabled())
             {
-                Log.Message(message);
+                Log.Message("RaddusX Demons: " + message);
             }
         }
 
@@ -24,7 +18,7 @@ namespace RaddusX.Demons.Utility
         {
             if (Mod_Settings_Utility.IsLoggingEnabled())
             {
-                Log.Warning(message);
+                Log.Warning("RaddusX Demons: " + message);
             }
         }
 
@@ -32,7 +26,7 @@ namespace RaddusX.Demons.Utility
         {
             if (Mod_Settings_Utility.IsLoggingEnabled())
             {
-                Log.Error(message);
+                Log.Error("RaddusX Demons: " + message);
             }
         }
     }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
 using Verse;
 using RimWorld;
 
@@ -21,7 +19,7 @@ namespace RaddusX.Demons.Utility
         public static bool RemoveGeneOverrideFromAllEndogenes(Gene gene, Pawn pawn)
         {
             bool removedOverrideAtLeastOnce = false;
-            foreach (var endogene in pawn.genes.Endogenes)
+            foreach (Gene endogene in pawn.genes.Endogenes)
             {
                 if (endogene.overriddenByGene == gene)
                 {
@@ -61,7 +59,7 @@ namespace RaddusX.Demons.Utility
         **/
         public static Gene? GetXenotypeGene(GeneDef geneDef, Pawn pawn)
         {
-            foreach (var xenogene in pawn.genes.Xenogenes)
+            foreach (Gene xenogene in pawn.genes.Xenogenes)
             {
                 if (xenogene.def == geneDef)
                 {
@@ -207,6 +205,27 @@ namespace RaddusX.Demons.Utility
             return IsIncubusXenotype(pawn) ?
                 pawn.genes.HasActiveGene(Defs.RaddusX_Demons_Incubus_Demon_Form_Gene) :
                 pawn.genes.HasActiveGene(Defs.RaddusX_Demons_Succubus_Demon_Form_Gene);
+        }
+
+       /**
+        * Get the active skin color endogene of the specified pawn.
+        *
+        * @param Pawn  pawn  The pawn
+        *
+        * @return Gene|null
+        **/
+        public static Gene? GetActiveSkinColorEndogene(Pawn pawn)
+        {
+            foreach (Gene gene in pawn.genes.Endogenes)
+            {
+                Logging_Utility.LogMessage($"Gene Label: {gene.Label}, Gene Active: {gene.Active}");
+                if (gene.Label == "skin color" && gene.Active)
+                {
+                     Logging_Utility.LogMessage("Found active skin color gene");
+                    return gene;
+                }
+            }
+            return null;
         }
     }
 }
