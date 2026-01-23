@@ -271,7 +271,7 @@ namespace RaddusX.Demons.Abilities
             target.Drawer.renderer.SetAllGraphicsDirty();
 
             // Add buffs to caster
-            //AddBuffsToCasterAfterDraining(caster);
+            AddBuffsToCasterAfterDraining(caster);
         }
 
         /**
