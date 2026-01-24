@@ -249,6 +249,14 @@ namespace RaddusX.Demons.Abilities
 
             Gene redSkinColorGene = Pawn_Utility.GetXenotypeGene(Defs.Skin_PaleRed, pawn);
 
+            // We need to add the red skin xenogene (it may not be present due to how it was added/removed in previous versions)
+            if (redSkinColorGene == null)
+            {
+                pawn.genes.AddGene(Defs.Skin_PaleRed, xenogene: true);
+                redSkinColorGene = Pawn_Utility.GetXenotypeGene(Defs.Skin_PaleRed, pawn);
+            }
+
+            // Now try to override it and update the pawn skin color
             if (redSkinColorGene != null)
             {
                 redSkinColorGene.OverrideBy(null);
