@@ -115,6 +115,7 @@ In no particular order:
 - New demon types, such as DND/Pathfinder inspired Alu-fiends (Succubus/Human offspring), Cambions (Incubus/Human offspring), and Tieflings (offspring whose distant ancestors were demons)
 - More sounds (particularly for Incubi as they don't have any at the moment)
 - Also a way to toggle sounds on/off
+- Add custom factions for the xenotypes. Thanks to SanDimas for the suggestion!
 - As you can see I have lots of ideas and things I'd like to do. I better stop here for now xD
 - I'm sure I forgot something
 - Have a suggestion? Let me know!
