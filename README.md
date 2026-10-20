@@ -9,7 +9,7 @@ Currently this mod contains Succubus & Incubus Xenotypes, but I may expand it in
 - Custom sounds (so far ability sounds + succubus sounds)
 
 # Requirements
-- RimWorld v1.6.
+- RimWorld v1.6 or 1.7.
 - [Biotech](https://store.steampowered.com/app/1826140/RimWorld__Biotech/)
 - [Royalty](https://store.steampowered.com/app/1149640/RimWorld__Royalty/)
 - [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
